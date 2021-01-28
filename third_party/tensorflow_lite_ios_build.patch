@@ -19,7 +19,7 @@ diff --git a/tensorflow/lite/ios/ios.bzl b/tensorflow/lite/ios/ios.bzl
 index 63747eb8..07bcb49d 100644
 --- a/tensorflow/lite/ios/ios.bzl
 +++ b/tensorflow/lite/ios/ios.bzl
-@@ -60,7 +60,7 @@ def tflite_ios_static_framework(
+@@ -60,7 +60,7 @@ def tflite_ios_framework(
             "BUNDLE_NAME=\"" + bundle_name + "\" " +
             "ALLOWLIST_FILE_PATH=\"$(location " + allowlist_symbols_file + ")\" " +
             "OUTPUT=\"$(OUTS)\" " +
@@ -28,7 +28,7 @@ index 63747eb8..07bcb49d 100644
  
      native.genrule(
          name = name,
-@@ -68,7 +68,7 @@ def tflite_ios_static_framework(
+@@ -68,7 +68,7 @@ def tflite_ios_framework(
          outs = [name + ".zip"],
          cmd = cmd,
          tools = [
